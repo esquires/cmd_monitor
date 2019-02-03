@@ -1,0 +1,4 @@
+dist
+cmd_monitor.egg-info
+tags
+*.pyc
