@@ -57,7 +57,8 @@ def cmd_monitor(command, command_dir='.',
     """
     print('calling "{}"'.format(command))
 
-    process = sp.Popen(command.split(' '), stdout=sp.PIPE, stderr=sp.STDOUT,
+    process = sp.Popen(command.strip().split(' '),
+                       stdout=sp.PIPE, stderr=sp.STDOUT,
                        cwd=command_dir, universal_newlines=True)
     stdout = []
     for line in process.stdout:
